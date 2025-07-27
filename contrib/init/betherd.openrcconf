@@ -1,0 +1,33 @@
+# /etc/conf.d/betherd: config file for /etc/init.d/betherd
+
+# Config file location
+#BLACKMORED_CONFIGFILE="/etc/bether/bether.conf"
+
+# What directory to write pidfile to?  (created and owned by $BLACKMORED_USER)
+#BLACKMORED_PIDDIR="/var/run/betherd"
+
+# What filename to give the pidfile
+#BLACKMORED_PIDFILE="${BLACKMORED_PIDDIR}/betherd.pid"
+
+# Where to write betherd data (be mindful that the blockchain is large)
+#BLACKMORED_DATADIR="/var/lib/betherd"
+
+# User and group to own betherd process
+#BLACKMORED_USER="bether"
+#BLACKMORED_GROUP="bether"
+
+# Path to betherd executable
+#BLACKMORED_BIN="/usr/bin/betherd"
+
+# Nice value to run betherd under
+#BLACKMORED_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BLACKMORED_OPTS=""
+
+# The timeout in seconds OpenRC will wait for betherd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BLACKMORED_SIGTERM_TIMEOUT=600
